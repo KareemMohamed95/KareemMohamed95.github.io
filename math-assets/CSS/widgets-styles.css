@@ -2,8 +2,6 @@
 .quill-fs-20{
 	font-size: 20px;
 }
-
-
 .calculus_btn_class{
     width: 56px;
     height: 40px;
@@ -21,12 +19,10 @@
 .calculus_btn_class:hover {
     box-shadow: none;
 }
-
 .calculus_btn_class:active {
     position: relative;
     top:1px;
 }
-
 .mathquill-editable {
    background: #FFFFFF;
    border: 1px solid #FFB846;
