@@ -10,18 +10,33 @@
     box-shadow: 0px 4px 10px rgba(142, 125, 125, 0.5);
     border-radius: 6px;
     outline:none;
+    color:#FDBC46;
     border:none;
+    font-weight: bold;
     transition: all 80ms
 }
 .calculus_btn_class:focus {
     outline: 0 !important;
+    background: #FFFFFF;
+    color:#FDBC46;
+    
 }
 .calculus_btn_class:hover {
     box-shadow: none;
+    background: #FFFFFF;
+    color:#FDBC46;
+    border: 1.25px solid #FDBC46;
+    border-radius: 6px;
 }
 .calculus_btn_class:active {
+    background: none;
     position: relative;
     top:1px;
+    color:#FDBC46;
+    border:none;
+    box-shadow: 4px 4px 8px rgba(208, 203, 203, 0.8) inset;
+    box-sizing: border-box;
+    border-radius: 7px;
 }
 .mathquill-editable {
    background: #FFFFFF !important;
