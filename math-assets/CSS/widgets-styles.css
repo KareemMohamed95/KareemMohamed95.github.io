@@ -21,6 +21,7 @@
     outline: 0 !important;
     background: #FFFFFF;
     color:#FDBC46;
+    background-size: contain;
     
 }
 .calculus_btn_class:hover {
@@ -29,6 +30,7 @@
     color:#FDBC46;
     border: 1.25px solid #FDBC46;
     border-radius: 6px;
+    background-size: contain;
 }
 .calculus_btn_class:active {
     background: none;
@@ -39,6 +41,7 @@
     box-shadow: 4px 4px 8px rgba(208, 203, 203, 0.8) inset;
     box-sizing: border-box;
     border-radius: 7px;
+    background-size: contain;
 }
 
 
