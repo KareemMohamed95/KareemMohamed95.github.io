@@ -151,7 +151,7 @@ function map(latex) {
 
 function isArabicChar(char) {
   if(char == 'أ' || char == 'ا' || char == 'ب' || char == 'ج' || char == 'د' || char == 'ه' || char == 'و'
-   ||char == 'س' || char == 'ص' || char == 'ع' || char == 'ت' || char == 'ظ' || char == 'ط')return true;
+   ||char == 'س' || char == 'ص' || char == 'ع' || char == 'ت' || char == 'ظ' || char == 'ط' || char == "ر")return true;
    return false;
 }
 var arabicMapping = {
@@ -168,6 +168,7 @@ var arabicMapping = {
   "س": "x",
   "ص": "y",
   "ع": "z",
+  "ر": "r",
   ",": ".",
   "جا": "\\sin",
   "جتا": "\\cos",
