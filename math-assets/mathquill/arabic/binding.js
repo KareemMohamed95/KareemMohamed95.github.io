@@ -98,6 +98,11 @@ var mathInputBinding = new Shiny.InputBinding();
     MQ.MathField(document.getElementById(lastFocusedInput)).cmd("\\sqrt");
     MQ.MathField(document.getElementById(lastFocusedInput)).focus();
   }
+  function addNthRootSqrtSymbol(){
+    if(lastFocusedInput == null)return;
+    MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\left(\\right)}^{\\frac{١}{٣}}");
+    MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+  }
   function addFracSymbol(){
     if(lastFocusedInput == null)return;
     MQ.MathField(document.getElementById(lastFocusedInput)).cmd("\\frac");
@@ -121,6 +126,66 @@ function addArabicPiSymbol(){
 function addArabicCommaSymbol(){
   if(lastFocusedInput == null)return;
   MQ.MathField(document.getElementById(lastFocusedInput)).cmd(",");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicSinSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("جا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicSinSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{جا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicCosSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("جتا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicCosSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{جتا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicTanSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("ظا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicTanSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{ظا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicCosecSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("قتا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicCosecSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{قتا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicSecSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("قا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicSecSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{قا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicCotanSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("ظتا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicCotanSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{ظتا\\left(\\right)}^{٢}");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function map(latex) {
@@ -151,7 +216,8 @@ function map(latex) {
 
 function isArabicChar(char) {
   if(char == 'أ' || char == 'ا' || char == 'ب' || char == 'ج' || char == 'د' || char == 'ه' || char == 'و'
-   ||char == 'س' || char == 'ص' || char == 'ع' || char == 'ت' || char == 'ظ' || char == 'ط' || char == "ر")return true;
+   ||char == 'س' || char == 'ص' || char == 'ع' || char == 'ت' || char == 'ظ' || char == 'ط' || char == "ر"
+   ||char == 'ق')return true;
    return false;
 }
 var arabicMapping = {
@@ -173,6 +239,9 @@ var arabicMapping = {
   "جا": "\\sin",
   "جتا": "\\cos",
   "ظا": "\\tan",
+  "قتا": "\\csc",
+  "قا": "\\sec",
+  "ظتا": "\\cot",
   "ط": "\\pi"
 }
 var englishMapping = {

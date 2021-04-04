@@ -214,7 +214,7 @@
 }
 .mq-math-mode sup.mq-nthroot {
   font-size: 80%;
-  vertical-align: 0.8em;
+  vertical-align: 0.0em;
   margin-right: -0.6em;
   margin-left: .2em;
   min-width: .5em;

@@ -99,6 +99,11 @@ function addSqrtSymbol(){
   MQ.MathField(document.getElementById(lastFocusedInput)).cmd("\\sqrt");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
+function addNthRootSqrtSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\left(\\right)}^{\\frac{1}{3}}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
 function addFracSymbol(){
   if(lastFocusedInput == null)return;
   MQ.MathField(document.getElementById(lastFocusedInput)).cmd("\\frac");
@@ -122,5 +127,65 @@ function addEnglishPiSymbol(){
 function addEnglishCommaSymbol(){
   if(lastFocusedInput == null)return;
   MQ.MathField(document.getElementById(lastFocusedInput)).cmd(".");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addSinSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\sin\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addSinSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\sin\\left(\\right)}^{2}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCosSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\cos\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCosSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\cos\\left(\\right)}^{2}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addTanSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\tan\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addTanSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\tan\\left(\\right)}^{2}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCosecSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\csc\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCosecSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\csc\\left(\\right)}^{2}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addSecSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\sec\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addSecSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\sec\\left(\\right)}^{2}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCotanSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\cot\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCotanSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\cot\\left(\\right)}^{2}");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
