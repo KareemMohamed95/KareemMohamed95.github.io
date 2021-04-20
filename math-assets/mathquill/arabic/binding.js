@@ -188,6 +188,26 @@ function addArabicCotanSquareSymbol(){
   MQ.MathField(document.getElementById(lastFocusedInput)).write("{ظتا\\left(\\right)}^{٢}");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
+function addArabicTheta(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\theta");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicAlpha(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\alpha");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicBeta(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\beta");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addArabicGamma(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\gamma");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
 function map(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {

@@ -189,3 +189,23 @@ function addCotanSquareSymbol(){
   MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\cot\\left(\\right)}^{2}");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
+function addEnglishTheta(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\theta");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addEnglishAlpha(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\alpha");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addEnglishBeta(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\beta");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addEnglishGamma(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\gamma");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
