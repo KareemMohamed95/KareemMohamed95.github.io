@@ -209,3 +209,19 @@ function addEnglishGamma(){
   MQ.MathField(document.getElementById(lastFocusedInput)).write("\\gamma");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
+
+function addPlusEnglish(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("+");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addMinusEnglish(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("-");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addPMEnglish(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\pm");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}

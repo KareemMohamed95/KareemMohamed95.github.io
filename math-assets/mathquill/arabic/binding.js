@@ -208,6 +208,21 @@ function addArabicGamma(){
   MQ.MathField(document.getElementById(lastFocusedInput)).write("\\gamma");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
+function addPlusArabic(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("+");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addMinusArabic(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("-");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addPMArabic(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\pm");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
 function map(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {
