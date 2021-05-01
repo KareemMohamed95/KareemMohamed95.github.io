@@ -241,6 +241,11 @@ function addAlphaSymbol(){
   MQ.MathField(document.getElementById(lastFocusedInput)).write("\\alpha");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
+function addBetaSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\beta");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
 function addGammaSymbol(){
   if(lastFocusedInput == null)return;
   MQ.MathField(document.getElementById(lastFocusedInput)).write("\\gamma");
@@ -278,7 +283,7 @@ function clearQuillKeyboard(){
 }
 function addCdotSign(){
   if(lastFocusedInput == null)return;
-  MQ.MathField(document.getElementById(lastFocusedInput)).latex("\\cdot");
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\cdot");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addPMSign(){
@@ -299,6 +304,11 @@ function addModulusSign(){
 function addEqualSign(){
   if(lastFocusedInput == null)return;
   MQ.MathField(document.getElementById(lastFocusedInput)).cmd("=");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addNumber(number){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd(number.toString());
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 // New design
