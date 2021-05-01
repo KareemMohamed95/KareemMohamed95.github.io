@@ -271,6 +271,11 @@ function addPiSymbol(){
   MQ.MathField(document.getElementById(lastFocusedInput)).cmd("\\pi");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
+function addInfinitySymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("\\infty");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
 function addPlusSign(){
   if(lastFocusedInput == null)return;
   MQ.MathField(document.getElementById(lastFocusedInput)).write("+");
@@ -299,11 +304,6 @@ function addPMSign(){
 function addCommaSymbol(){
   if(lastFocusedInput == null)return;
   MQ.MathField(document.getElementById(lastFocusedInput)).cmd(".");
-  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
-}
-function addModulusSign(){
-  if(lastFocusedInput == null)return;
-  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("%");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addEqualSign(){
