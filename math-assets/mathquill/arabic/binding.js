@@ -341,7 +341,7 @@ function clearQuillKeyboard(){
 }
 function addCdotSign(){
   if(lastFocusedInput == null)return;
-  MQ.MathField(document.getElementById(lastFocusedInput)).latex("\\cdot");
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\cdot");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addPMSign(){
