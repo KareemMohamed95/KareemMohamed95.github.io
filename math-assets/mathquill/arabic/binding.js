@@ -223,6 +223,143 @@ function addPMArabic(){
   MQ.MathField(document.getElementById(lastFocusedInput)).write("\\pm");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
+// New design
+function addSinSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("جا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCosSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("جتا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addTanSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("ظا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCosecSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("قتا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addSecSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("قا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCotanSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("ظتا\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addSinSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{جا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCosSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{جتا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addTanSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{ظا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCosecSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{قتا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addSecSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{قا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCotanSquareSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{ظتا\\left(\\right)}^{٢}");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addLeftParenthesesSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\left(");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addRightParenthesesSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addAlphaSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\alpha");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addGammaSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\gamma");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addThetaSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\theta");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addEpsilonSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\epsilon");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addPiSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("ط");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addPlusSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("+");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addMinusSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("-");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function clearQuillKeyboard(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).latex("");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCdotSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).latex("\\cdot");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addPMSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\pm");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCommaSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd(",");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addModulusSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("%");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addEqualSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("=");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+// New design
 function map(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {

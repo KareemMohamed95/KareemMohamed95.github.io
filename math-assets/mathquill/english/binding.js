@@ -225,3 +225,80 @@ function addPMEnglish(){
   MQ.MathField(document.getElementById(lastFocusedInput)).write("\\pm");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
+// New design
+function addLeftParenthesesSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\left(");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addRightParenthesesSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addAlphaSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\alpha");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addGammaSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\gamma");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addThetaSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\theta");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addEpsilonSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\epsilon");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addPiSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("\\pi");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addPlusSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("+");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addMinusSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("-");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function clearQuillKeyboard(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).latex("");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCdotSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).latex("\\cdot");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addPMSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\pm");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addCommaSymbol(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd(".");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addModulusSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("%");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+function addEqualSign(){
+  if(lastFocusedInput == null)return;
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("=");
+  MQ.MathField(document.getElementById(lastFocusedInput)).focus();
+}
+// New design
