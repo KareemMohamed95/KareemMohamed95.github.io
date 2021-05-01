@@ -100,10 +100,9 @@ function addSqrtSymbol(){
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addNthRootSqrtSymbol(){
+  console.log(lastFocusedInput);
   if(lastFocusedInput == null)return;
-  console.log("HERE");
-  MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\left(\\right)}^{\\frac{1}{3}}");
-  console.log("THERE");
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("{()}^{\\frac{1}{3}}");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addFracSymbol(){
@@ -230,12 +229,12 @@ function addPMEnglish(){
 // New design
 function addLeftParenthesesSymbol(){
   if(lastFocusedInput == null)return;
-  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("\\left(");
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("(");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addRightParenthesesSymbol(){
   if(lastFocusedInput == null)return;
-  MQ.MathField(document.getElementById(lastFocusedInput)).cmd("\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).cmd(")");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addAlphaSymbol(){

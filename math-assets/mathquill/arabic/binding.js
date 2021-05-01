@@ -100,7 +100,7 @@ var mathInputBinding = new Shiny.InputBinding();
   }
   function addNthRootSqrtSymbol(){
     if(lastFocusedInput == null)return;
-    MQ.MathField(document.getElementById(lastFocusedInput)).write("{\\left(\\right)}^{\\frac{١}{٣}}");
+    MQ.MathField(document.getElementById(lastFocusedInput)).write("{()}^{\\frac{١}{٣}}");
     MQ.MathField(document.getElementById(lastFocusedInput)).focus();
   }
   function addFracSymbol(){
@@ -286,12 +286,12 @@ function addCotanSquareSymbol(){
 }
 function addLeftParenthesesSymbol(){
   if(lastFocusedInput == null)return;
-  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\left(");
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("(");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addRightParenthesesSymbol(){
   if(lastFocusedInput == null)return;
-  MQ.MathField(document.getElementById(lastFocusedInput)).write("\\right)");
+  MQ.MathField(document.getElementById(lastFocusedInput)).write(")");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addAlphaSymbol(){
