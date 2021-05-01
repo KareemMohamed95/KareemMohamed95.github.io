@@ -291,12 +291,12 @@ function addCotanSquareSymbol(){
 }
 function addLeftParenthesesSymbol(){
   if(lastFocusedInput == null)return;
-  MQ.MathField(document.getElementById(lastFocusedInput)).write("(");
+  MQ.MathField(document.getElementById(lastFocusedInput)).write(")");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addRightParenthesesSymbol(){
   if(lastFocusedInput == null)return;
-  MQ.MathField(document.getElementById(lastFocusedInput)).write(")");
+  MQ.MathField(document.getElementById(lastFocusedInput)).write("(");
   MQ.MathField(document.getElementById(lastFocusedInput)).focus();
 }
 function addAlphaSymbol(){
