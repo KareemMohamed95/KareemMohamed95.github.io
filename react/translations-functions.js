@@ -1,5 +1,5 @@
-function mj(j) {
-    let language = localStorage.getItem("language");
+function mj(j, lang) {
+    let language = lang == null ? localStorage.getItem("language") : lang;
     if(language === undefined || language === null || language == "english")return "\\("+j+"\\)";
     return "\\(\\alwaysar{"+j+"}\\)";
   }
