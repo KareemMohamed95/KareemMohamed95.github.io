@@ -1,6 +1,6 @@
 function mj(j, lang) {
     let language = lang == null ? localStorage.getItem("language") : lang;
-    if(language === undefined || language === null || language == "english")return "\\("+j+"\\)";
+    if(language === undefined || language === null || language == "en")return "\\("+j+"\\)";
     return "\\(\\alwaysar{"+j+"}\\)";
   }
 function tnum(number, mj = false, language = null) {
@@ -23,13 +23,13 @@ function tnum(number, mj = false, language = null) {
 function getLanguage() {
     let language = localStorage.getItem("language");
     if(language === undefined || language === null) {
-        localStorage.setItem("language", "english");
-        language = "english";
+        localStorage.setItem("language", "en");
+        language = "en";
     }
     return language;
 }
 function mapNumber(char, language) {
-    if (language == "arabic") {
+    if (language == "ar") {
         if (char == "0") char = "٠";
         else if(char == "1")char = "١";
         else if(char == "2")char = "٢";
