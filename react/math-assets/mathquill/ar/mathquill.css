@@ -430,6 +430,9 @@
   border: 1px solid #FFB846 !important;
   box-sizing: border-box !important;
   border-radius: 6px !important;
+  padding: 4px 8px;
+  font-size: 25px;
+  line-height: 1;
 }
 .quill-fs-20{
 	font-size: 20px;
