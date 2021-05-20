@@ -1,5 +1,5 @@
 {
-    "english": {
+    "en": {
         "one": "1",
         "two": "2",
         "three": "3",
@@ -36,7 +36,7 @@
         "right_parentheses": ")",
         "dot": "."
     },
-    "arabic": {
+    "ar": {
         "one": "١",
         "two": "٢",
         "three": "٣",
