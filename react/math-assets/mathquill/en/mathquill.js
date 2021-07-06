@@ -168,6 +168,31 @@ function addNumber(number){
  MQ.MathField(document.getElementById(lastFocusedMQ)).cmd(number.toString());
  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
 }
+function addPhiSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("\\phi");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
+ function addRSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("R");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
+ function addSeparatorSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write(",");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
+ function addLeftSquareSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("[");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
+ function addRightSquareSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("]");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
 /* MathInput functions */
 
 

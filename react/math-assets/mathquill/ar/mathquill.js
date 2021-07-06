@@ -168,6 +168,31 @@ function addNumber(number){
   MQ.MathField(document.getElementById(lastFocusedMQ)).cmd(mqEnglishMapping[number]);
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
 }
+function addPhiSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("\\phi");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
+ function addRSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("ح");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
+ function addSeparatorSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("،");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
+ function addLeftSquareSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("[");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
+ function addRightSquareSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("]");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
 function ArabicToEnglishLatex(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {
@@ -197,7 +222,7 @@ function ArabicToEnglishLatex(latex) {
 function isArabicChar(char) {
   if(char == 'أ' || char == 'ا' || char == 'ب' || char == 'ج' || char == 'د' || char == 'ه' || char == 'و'
    ||char == 'س' || char == 'ص' || char == 'ع' || char == 'ت' || char == 'ظ' || char == 'ط' || char == "ر"
-   ||char == 'ق')return true;
+   ||char == 'ق' || char == 'ح')return true;
    return false;
 }
 var mqArabicMapping = {
@@ -219,6 +244,7 @@ var mqArabicMapping = {
   "ب": "b",
   "ح": "R",
   ",": ".",
+  "،": ",",
   "جا": "\\sin",
   "جتا": "\\cos",
   "ظا": "\\tan",

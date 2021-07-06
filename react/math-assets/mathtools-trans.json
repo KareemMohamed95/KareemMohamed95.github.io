@@ -34,7 +34,11 @@
         "off_image_src_new":"url(https://kareemmohamed95.github.io/math-assets/images/off_new.png)",
         "left_parentheses": "(",
         "right_parentheses": ")",
-        "dot": "."
+        "dot": ".",
+        "R": "R",
+        "separator": ",",
+        "left_square": "[",
+        "right_square": "]"
     },
     "ar": {
         "one": "١",
@@ -71,7 +75,11 @@
         "off_image_src_new":"url(https://kareemmohamed95.github.io/math-assets/images/off_new.png)",
         "left_parentheses": ")",
         "right_parentheses": "(",
-        "dot": ","
+        "dot": ",",
+        "R": "ح",
+        "separator": "،",
+        "left_square": "]",
+        "right_square": "["
     },
     "general": {
         "theta": "θ",
@@ -81,6 +89,7 @@
         "epsilon": "ε",
         "pm": "±",
         "division": "÷",
-        "infinity": "∞"
+        "infinity": "∞",
+        "phi": "\\phi"
     }
 }
