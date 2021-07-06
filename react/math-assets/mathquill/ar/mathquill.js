@@ -85,12 +85,12 @@ function addCotanSquareSymbol(){
 }
 function addLeftParenthesesSymbol(){
   if(lastFocusedMQ == null)return;
-  MQ.MathField(document.getElementById(lastFocusedMQ)).write("(");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write(")");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
 }
 function addRightParenthesesSymbol(){
   if(lastFocusedMQ == null)return;
-  MQ.MathField(document.getElementById(lastFocusedMQ)).write(")");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("(");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
 }
 function addAlphaSymbol(){
@@ -185,12 +185,12 @@ function addPhiSymbol(){
  }
  function addLeftSquareSymbol(){
   if(lastFocusedMQ == null)return;
-  MQ.MathField(document.getElementById(lastFocusedMQ)).write("[");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("]");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
  function addRightSquareSymbol(){
   if(lastFocusedMQ == null)return;
-  MQ.MathField(document.getElementById(lastFocusedMQ)).write("]");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("[");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
 function ArabicToEnglishLatex(latex) {
