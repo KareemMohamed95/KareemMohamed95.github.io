@@ -90,6 +90,7 @@
         "pm": "±",
         "division": "÷",
         "infinity": "∞",
-        "phi": "\\phi"
+        "phi": "\\phi",
+        "cup": "∪"
     }
 }
