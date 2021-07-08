@@ -193,6 +193,11 @@ function addPhiSymbol(){
   MQ.MathField(document.getElementById(lastFocusedMQ)).write("]");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
+ function addCupSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("\\cup");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
 /* MathInput functions */
 
 
