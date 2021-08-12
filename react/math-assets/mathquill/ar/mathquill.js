@@ -195,12 +195,12 @@ function addPhiSymbol(){
  }
  function addLeftSetSymbol(){
   if(lastFocusedMQ == null)return;
-  MQ.MathField(document.getElementById(lastFocusedMQ)).cmd("}");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("}");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
  function addRightSetSymbol(){
   if(lastFocusedMQ == null)return;
-  MQ.MathField(document.getElementById(lastFocusedMQ)).cmd("{");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("{");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
  function addCupSymbol(){
