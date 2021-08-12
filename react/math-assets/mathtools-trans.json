@@ -91,6 +91,8 @@
         "division": "÷",
         "infinity": "∞",
         "phi": "\\phi",
-        "cup": "∪"
+        "cup": "∪",
+        "left_set": "{",
+        "right_set": "}"
     }
 }
