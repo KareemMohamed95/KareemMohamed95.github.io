@@ -93,6 +93,7 @@
         "phi": "\\phi",
         "cup": "∪",
         "left_set": "{",
-        "right_set": "}"
+        "right_set": "}",
+        "abs": "|"
     }
 }

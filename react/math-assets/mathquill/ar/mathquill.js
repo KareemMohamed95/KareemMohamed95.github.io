@@ -193,6 +193,11 @@ function addPhiSymbol(){
   MQ.MathField(document.getElementById(lastFocusedMQ)).write("[");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
+ function addAbsSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("\\mid");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
  function addLeftSetSymbol(){
   if(lastFocusedMQ == null)return;
   MQ.MathField(document.getElementById(lastFocusedMQ)).cmd("}");
