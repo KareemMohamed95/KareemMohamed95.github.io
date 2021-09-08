@@ -217,17 +217,18 @@ function ArabicToEnglishLatex(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {
     /* special symbols maaping */
-    if(i+2 <= latex.length-1 && latex.substr(i,3) === 'لو_') {
+    if(latex.substr(i,3) === 'لو_') {
       newLatex += "\\log";
+      if(latex)
       i+=2;
       continue;
     }
-    if(i+1 <= latex.length-1 && latex.substr(i,2) === 'لو') {
+    if(latex.substr(i,2) === 'لو') {
       newLatex += "\\log";
       i++;
       continue;
     }
-    if(i+1 <= latex.length-1 && latex.substr(i,2) === 'هـ') {
+    if(latex.substr(i,2) === 'هـ') {
       newLatex += "e";
       i++;
       continue;
@@ -253,7 +254,28 @@ function ArabicToEnglishLatex(latex) {
       i = j-1;
     }
   }
-  return newLatex;
+  let finalLatex = ""
+  for(let i = 0;i < newLatex.length; i++) {
+    /* special symbols mapping */
+    if(newLatex.substr(i,3) === 'log') {
+      finalLatex += 'log'
+      let j = i+3;
+      let neglect = -1;
+      while(j <= newLatex.length-1 && newLatex[j] === '_') j++;
+      while(j <= latex.length-1) {
+        if(newLatex[j] === '{') {j++; neglect++; continue;}
+        if(newLatex[j] === '}') {j++; if(neglect === 0) {break} else {neglect--}}
+        if(newLatex[j] === '(')  break;
+        finalLatex += newLatex[j];
+        j++;
+      }
+      i = j-1;
+      continue;
+    }
+    /* special symbols mapping */
+    finalLatex += newLatex[i]
+  }
+  return finalLatex;
 }
 
 function isArabicChar(char) {

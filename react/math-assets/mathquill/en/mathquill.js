@@ -5,13 +5,14 @@ function MIValue(id) {
   let newLatex = '';
   for(let i = 0;i < latex.length; i++) {
     /* special symbols mapping */
-    if(i+2 <= latex.length-1 && latex.substr(i,3) === 'log') {
+    if(latex.substr(i,3) === 'log') {
       newLatex += 'log'
       let j = i+3;
+      let neglect = -1;
       while(j <= latex.length-1 && latex[j] === '_') j++;
       while(j <= latex.length-1) {
-        if(latex[j] === '{') {j++; continue;}
-        if(latex[j] === '}') {j++; break;}
+        if(latex[j] === '{') {j++; neglect++; continue;}
+        if(latex[j] === '}') {j++; if(neglect === 0) {break} else {neglect--}}
         if(latex[j] === '(')  break;
         newLatex += latex[j];
         j++;
