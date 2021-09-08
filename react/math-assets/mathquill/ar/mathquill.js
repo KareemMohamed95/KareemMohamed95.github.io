@@ -218,12 +218,12 @@ function ArabicToEnglishLatex(latex) {
   for(var i = 0;i < latex.length;i++) {
     /* special symbols maaping */
     if(i+2 <= latex.length-1 && latex.substr(i,3) === 'لو_') {
-      newLatex += "log";
+      newLatex += "\\log";
       i+=2;
       continue;
     }
     if(i+1 <= latex.length-1 && latex.substr(i,2) === 'لو') {
-      newLatex += "log";
+      newLatex += "\\log";
       i++;
       continue;
     }
