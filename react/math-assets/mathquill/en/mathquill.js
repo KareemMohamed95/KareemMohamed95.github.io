@@ -7,11 +7,8 @@ function MIValue(id) {
     /* special symbols mapping */
     if(i+2 <= latex.length-1 && latex.substr(i,3) === 'log') {
       newLatex += 'log'
-      if(i+3 === latex.length || (latex[i+3] === '_' && i+4 === latex.length)) {
-        newLatex += '()'
-        break;
-      }
-      let j = latex[i+3] === '_' ? i+4 : i+3
+      let j = i;
+      while(j <= latex.length-1 && (latex[j] === ' ' || latex[j] === '_')) j++;
       while(j <= latex.length-1) {
         if(latex[j] === '{') {j++; continue;}
         if(latex[j] === '}') {j++; break;}
