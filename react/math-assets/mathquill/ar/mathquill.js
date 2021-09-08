@@ -217,14 +217,14 @@ function ArabicToEnglishLatex(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {
     /* special symbols maaping */
-    if(i+1 <= latex.length-1 && latex.substr(i,2) === 'لو') {
-      newLatex += "log";
-      i++;
-      continue;
-    }
     if(i+2 <= latex.length-1 && latex.substr(i,3) === 'لو_') {
       newLatex += "log";
       i+=2;
+      continue;
+    }
+    if(i+1 <= latex.length-1 && latex.substr(i,2) === 'لو') {
+      newLatex += "log";
+      i++;
       continue;
     }
     if(i+1 <= latex.length-1 && latex.substr(i,2) === 'هـ') {
