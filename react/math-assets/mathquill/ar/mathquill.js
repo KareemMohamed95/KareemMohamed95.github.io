@@ -216,11 +216,13 @@ function addPhiSymbol(){
 function ArabicToEnglishLatex(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {
-    if(i+3 <= latex.length-1 && latex.substr(i, 4) === "{هـ}") {
+    /* special character maaping */
+    if(i+1 <= latex.length-1 && latex.substr(i, 2) === "هـ") {
       latex += "e";
-      i += 3;
+      i++;
       continue;
     }
+    /* special character maaping */
     let mappedWord = "";
     let j = i;
     while(1) {
