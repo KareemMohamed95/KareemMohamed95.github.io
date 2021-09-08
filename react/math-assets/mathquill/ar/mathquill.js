@@ -249,7 +249,7 @@ function ArabicToEnglishLatex(latex) {
 function isArabicChar(char) {
   if(char == 'أ' || char == 'ا' || char == 'ب' || char == 'ج' || char == 'د' || char == 'ه' || char == 'و'
    ||char == 'س' || char == 'ص' || char == 'ع' || char == 'ت' || char == 'ظ' || char == 'ط' || char == "ر"
-   ||char == 'ق' || char == 'ح' || char == 'ن')return true;
+   ||char == 'ق' || char == 'ح' || char == 'ن' || char == 'ل')return true;
    return false;
 }
 var mqArabicMapping = {
@@ -280,7 +280,8 @@ var mqArabicMapping = {
   "قتا": "\\csc",
   "قا": "\\sec",
   "ظتا": "\\cot",
-  "ط": "\\pi"
+  "ط": "\\pi",
+  "لو": "log"
 };
 var mqEnglishMapping = {
   "0": "٠",
