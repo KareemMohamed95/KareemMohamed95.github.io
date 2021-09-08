@@ -11,9 +11,22 @@ function MIValue(id) {
       let neglect = -1;
       while(j <= latex.length-1 && latex[j] === '_') j++;
       while(j <= latex.length-1) {
-        if(latex[j] === '{') {j++; neglect++; continue;}
-        if(latex[j] === '}') {j++; if(neglect === 0) {break} else {neglect--}}
-        if(latex[j] === '(')  break;
+        if(latex[j] === '{') {
+          if(neglect > -1) newLatex += '{'
+          neglect++; 
+          j++;
+          continue;
+        }
+        if(latex[j] === '}') {
+          if(neglect === 0) break 
+          else {
+            neglect--;
+            newLatex += '}';
+            j++;
+            continue;
+          }
+        }
+        if(latex[j] === '(' && neglect === -1)  break;
         newLatex += latex[j];
         j++;
       }

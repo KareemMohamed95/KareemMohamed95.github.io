@@ -254,7 +254,7 @@ function ArabicToEnglishLatex(latex) {
       i = j-1;
     }
   }
-  let finalLatex = ""
+  let finalLatex = '';
   for(let i = 0;i < newLatex.length; i++) {
     /* special symbols mapping */
     if(newLatex.substr(i,3) === 'log') {
@@ -262,10 +262,23 @@ function ArabicToEnglishLatex(latex) {
       let j = i+3;
       let neglect = -1;
       while(j <= newLatex.length-1 && newLatex[j] === '_') j++;
-      while(j <= latex.length-1) {
-        if(newLatex[j] === '{') {j++; neglect++; continue;}
-        if(newLatex[j] === '}') {j++; if(neglect === 0) {break} else {neglect--}}
-        if(newLatex[j] === '(')  break;
+      while(j <= newLatex.length-1) {
+        if(newLatex[j] === '{') {
+          if(neglect > -1) finalLatex += '{'
+          neglect++; 
+          j++;
+          continue;
+        }
+        if(newLatex[j] === '}') {
+          if(neglect === 0) break 
+          else {
+            neglect--;
+            finalLatex += '}';
+            j++;
+            continue;
+          }
+        }
+        if(newLatex[j] === '(' && neglect === -1)  break;
         finalLatex += newLatex[j];
         j++;
       }
