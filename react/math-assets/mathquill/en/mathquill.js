@@ -16,7 +16,7 @@ function MIValue(id) {
         if(latex[j] === '{') {j++; continue;}
         if(latex[j] === '}') {j++; break;}
         if(latex[j] === '(')  break;
-        newLatex += latex[j];
+        if(latex[j] !== ' ') newLatex += latex[j];
         j++;
       }
       i = j-1;
