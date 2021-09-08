@@ -1,7 +1,31 @@
 /* MathInput functions */
 var lastFocusedMQ = null;
 function MIValue(id) {
-  return MQ.MathField(document.getElementById(id)).latex();
+  let latex = MQ.MathField(document.getElementById(id)).latex();
+  let newLatex = '';
+  for(let i = 0;i < latex.length; i++) {
+    /* special symbols mapping */
+    if(i+2 <= latex.length-1 && latex.substr(i,3) === 'log') {
+      newLatex += 'log'
+      if(i+3 === latex.length || (latex[i+3] === '_' && i+4 === latex.length)) {
+        newLatex += '()'
+        break;
+      }
+      let j = latex[i+3] === '_' ? i+4 : i+3
+      while(j <= latex.length-1) {
+        if(latex[j] === '{') {j++; continue;}
+        if(latex[j] === '}') {j++; break;}
+        if(latex[j] === '(')  break;
+        newLatex += latex[j];
+        j++;
+      }
+      i = j-1;
+      continue;
+    }
+    /* special symbols mapping */
+    newLatex += latex[i]
+  }
+  return newLatex;
 }
 function addSqrtSymbol(){
  if(lastFocusedMQ == null)return;
