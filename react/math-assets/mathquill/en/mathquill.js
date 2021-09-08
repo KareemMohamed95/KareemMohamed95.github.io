@@ -261,6 +261,11 @@ function addPhiSymbol(){
   MQ.MathField(document.getElementById(lastFocusedMQ)).write("\\ln\\left(\\right)");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
+ function addeSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("e");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
 /* MathInput functions */
 
 

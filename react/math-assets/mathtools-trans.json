@@ -39,7 +39,8 @@
         "separator": ",",
         "left_square": "[",
         "right_square": "]",
-        "ln": "\\ln"
+        "ln": "\\ln",
+        "e": "e"
     },
     "ar": {
         "one": "١",
@@ -81,7 +82,8 @@
         "separator": "،",
         "left_square": "[",
         "right_square": "]",
-        "ln": "\\log_h"
+        "ln": "\\log_h",
+        "e": "هـ"
     },
     "general": {
         "theta": "θ",

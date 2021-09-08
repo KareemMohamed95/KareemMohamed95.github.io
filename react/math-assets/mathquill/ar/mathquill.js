@@ -223,6 +223,11 @@ function addPhiSymbol(){
   MQ.MathField(document.getElementById(lastFocusedMQ)).write("لو_{هـ}\\left(\\right)");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
+ function addeSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("هـ");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
 function ArabicToEnglishLatex(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {
