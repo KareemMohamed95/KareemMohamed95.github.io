@@ -218,7 +218,7 @@ function ArabicToEnglishLatex(latex) {
   for(var i = 0;i < latex.length;i++) {
     /* special character maaping */
     if(i+1 <= latex.length-1 && latex.substr(i, 2) === "هـ") {
-      latex += "e";
+      newLatex += "e";
       i++;
       continue;
     }
@@ -249,7 +249,7 @@ function ArabicToEnglishLatex(latex) {
 function isArabicChar(char) {
   if(char == 'أ' || char == 'ا' || char == 'ب' || char == 'ج' || char == 'د' || char == 'ه' || char == 'و'
    ||char == 'س' || char == 'ص' || char == 'ع' || char == 'ت' || char == 'ظ' || char == 'ط' || char == "ر"
-   ||char == 'ق' || char == 'ح' || char == 'ن' || char == 'ل')return true;
+   ||char == 'ق' || char == 'ح' || char == 'ن')return true;
    return false;
 }
 var mqArabicMapping = {
@@ -280,8 +280,7 @@ var mqArabicMapping = {
   "قتا": "\\csc",
   "قا": "\\sec",
   "ظتا": "\\cot",
-  "ط": "\\pi",
-  "لو": "log"
+  "ط": "\\pi"
 };
 var mqEnglishMapping = {
   "0": "٠",
