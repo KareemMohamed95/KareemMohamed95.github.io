@@ -6,8 +6,8 @@ function MIValue(id) {
   for(let i = 0;i < latex.length; i++) {
     /* special symbols mapping */
     if(latex.substr(i,2) === 'ln' || latex.substr(i,3) === 'log') {
-      newLatex += 'log'
-      let j = i+3;
+      newLatex += latex.substr(i,2) === "ln" ? 'loge' : 'log'
+      let j = latex.substr(i,2) === "ln" ? i+2 : i+3;
       let neglect = -1;
       while(j <= latex.length-1 && latex[j] === '_') j++;
       while(j <= latex.length-1) {
