@@ -270,7 +270,10 @@ function ArabicToEnglishLatex(latex) {
           continue;
         }
         if(newLatex[j] === '}') {
-          if(neglect === 0) break 
+          if(neglect === 0) {
+            j++;
+            break;
+          }
           else {
             neglect--;
             finalLatex += '}';
