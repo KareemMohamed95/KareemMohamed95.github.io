@@ -5,7 +5,7 @@ function MIValue(id) {
   let newLatex = '';
   for(let i = 0;i < latex.length; i++) {
     /* special symbols mapping */
-    if(latex.substr(i,3) === 'log') {
+    if(latex.substr(i,2) === 'ln' || latex.substr(i,3) === 'log') {
       newLatex += 'log'
       let j = i+3;
       let neglect = -1;
