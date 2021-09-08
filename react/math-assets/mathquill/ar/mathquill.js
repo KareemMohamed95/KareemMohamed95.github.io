@@ -216,13 +216,23 @@ function addPhiSymbol(){
 function ArabicToEnglishLatex(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {
-    /* special character maaping */
-    if(i+1 <= latex.length-1 && latex.substr(i, 2) === "هـ") {
+    /* special symbols maaping */
+    if(i+1 <= latex.length-1 && latex.substr(i,2) === 'لو') {
+      newLatex += "log";
+      i++;
+      continue;
+    }
+    if(i+2 <= latex.length-1 && latex.substr(i,3) === 'لو_') {
+      newLatex += "log";
+      i+=2;
+      continue;
+    }
+    if(i+1 <= latex.length-1 && latex.substr(i,2) === 'هـ') {
       newLatex += "e";
       i++;
       continue;
     }
-    /* special character maaping */
+    /* special symbols maaping */
     let mappedWord = "";
     let j = i;
     while(1) {
@@ -249,7 +259,7 @@ function ArabicToEnglishLatex(latex) {
 function isArabicChar(char) {
   if(char == 'أ' || char == 'ا' || char == 'ب' || char == 'ج' || char == 'د' || char == 'ه' || char == 'و'
    ||char == 'س' || char == 'ص' || char == 'ع' || char == 'ت' || char == 'ظ' || char == 'ط' || char == "ر"
-   ||char == 'ق' || char == 'ح' || char == 'ن' || char == 'ل')return true;
+   ||char == 'ق' || char == 'ح' || char == 'ن')return true;
    return false;
 }
 var mqArabicMapping = {
@@ -280,8 +290,7 @@ var mqArabicMapping = {
   "قتا": "\\csc",
   "قا": "\\sec",
   "ظتا": "\\cot",
-  "ط": "\\pi",
-  "لو": "log"
+  "ط": "\\pi"
 };
 var mqEnglishMapping = {
   "0": "٠",
