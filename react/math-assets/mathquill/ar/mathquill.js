@@ -281,7 +281,7 @@ var mqArabicMapping = {
   "قا": "\\sec",
   "ظتا": "\\cot",
   "ط": "\\pi",
-  "لو": "log_"
+  "لو": "log"
 };
 var mqEnglishMapping = {
   "0": "٠",
