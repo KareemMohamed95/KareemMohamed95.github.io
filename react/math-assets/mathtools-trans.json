@@ -38,7 +38,8 @@
         "R": "R",
         "separator": ",",
         "left_square": "[",
-        "right_square": "]"
+        "right_square": "]",
+        "ln": "\\ln"
     },
     "ar": {
         "one": "١",
@@ -79,7 +80,8 @@
         "R": "ح",
         "separator": "،",
         "left_square": "[",
-        "right_square": "]"
+        "right_square": "]",
+        "ln": "لو_{هـ}"
     },
     "general": {
         "theta": "θ",
@@ -94,6 +96,7 @@
         "cup": "∪",
         "left_set": "{",
         "right_set": "}",
-        "abs": "|"
+        "abs": "|",
+        "logba": "\\log_b a"
     }
 }

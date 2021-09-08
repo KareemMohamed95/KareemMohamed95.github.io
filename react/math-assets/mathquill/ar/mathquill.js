@@ -213,6 +213,16 @@ function addPhiSymbol(){
   MQ.MathField(document.getElementById(lastFocusedMQ)).write("\\cup");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
+ function addlogbaSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("لو_ب \\left(أ\\right)");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
+ function addlnSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("لو_{هـ}\\left(\\right)");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
 function ArabicToEnglishLatex(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {
