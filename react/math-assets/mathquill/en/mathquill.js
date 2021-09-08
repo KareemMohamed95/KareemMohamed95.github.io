@@ -8,12 +8,12 @@ function MIValue(id) {
     if(i+2 <= latex.length-1 && latex.substr(i,3) === 'log') {
       newLatex += 'log'
       let j = i+3;
-      while(j <= latex.length-1 && (latex[j] === ' ' || latex[j] === '_')) j++;
+      while(j <= latex.length-1 && latex[j] === '_') j++;
       while(j <= latex.length-1) {
         if(latex[j] === '{') {j++; continue;}
         if(latex[j] === '}') {j++; break;}
         if(latex[j] === '(')  break;
-        if(latex[j] !== ' ') newLatex += latex[j];
+        newLatex += latex[j];
         j++;
       }
       i = j-1;
