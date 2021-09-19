@@ -1,7 +1,8 @@
 /* MathInput functions */
 var lastFocusedMQ = null;
 function MIValue(id) {
-  return ArabicToEnglishLatex(MQ.MathField(document.getElementById(id)).latex());
+
+  return ArabicToEnglishLatex(handlePowers(MQ.MathField(document.getElementById(id)).latex()));
 }
 function addSqrtSymbol(){
   if(lastFocusedMQ == null)return;
@@ -228,7 +229,15 @@ function addPhiSymbol(){
   MQ.MathField(document.getElementById(lastFocusedMQ)).write("هـ");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
-function ArabicToEnglishLatex(latex) {
+ function handlePowers(latex) {
+   let newLatex = ""
+   for(let i = 0; i < latex.length; i++) {
+     newLatex += latex[i];
+     if(latex[i] !== "{" && i > 0 && latex[i-1] === "^") newLatex += "\\ "
+   }
+   return newLatex;
+ }
+ function ArabicToEnglishLatex(latex) {
   let newLatex = "";
   for(var i = 0;i < latex.length;i++) {
     /* special symbols maaping */
