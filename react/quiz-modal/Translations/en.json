@@ -1,3 +1,9 @@
 {
-    "test": "test"
+  "ops": "Oops...",
+  "answerViewed": "You viewed the answer Please generate a new question",
+  "newQuestion": "New Question",
+  "goodJob": "Good Job",
+  "continue": "Continue",
+  "wrongAnswer": "Wrong Answer",
+  "tryAgain": "Try Again"
 }
