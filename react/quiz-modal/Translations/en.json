@@ -1,9 +1,14 @@
 {
-  "ops": "Oops...",
-  "answerViewed": "You viewed the answer Please generate a new question",
-  "newQuestion": "New Question",
-  "goodJob": "Good Job",
-  "continue": "Continue",
-  "wrongAnswer": "Wrong Answer",
-  "tryAgain": "Try Again"
+  "Submit message-oops": "Oops...",
+  "Submit message-Answer Viewed": "You viewed the answer, Please generate a new question",
+  "Submit message-New Question": "New Question",
+  "Submit message-Good Job": "Good job",
+  "Submit message-continue": "Continue",
+  "Submit message-Wrong Answer": "Wrong answer",
+  "Submit message-Try Again": "Try Again",
+  "Submit message-Missing values": "Please enter all missing values",
+  "Submit message-Missing values title": "Missing values",
+  "Submit message-Missing values text": "Please enter all values",
+  "Submit message-Correct answer": "Correct answer",
+  "Submit message-OK": "OK"
 }

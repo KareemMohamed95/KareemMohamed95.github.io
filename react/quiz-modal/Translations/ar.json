@@ -1,9 +1,14 @@
 {
-  "ops": "عذراً",
-  "answerViewed": "لقد أظهرت الإجابة برجاء الإنتقال لسؤال جديد",
-  "newQuestion": "سؤال جديد",
-  "goodJob": "أحسنت",
-  "continue": "المتابعة",
-  "wrongAnswer": "إجابة خاطئة",
-  "tryAgain": "حاول مجدداً"
+  "Submit message-oops": "عذراً",
+  "Submit message-Answer Viewed": "لقد أظهرت الإجابة ، برجاء الإنتقال لسؤال جديد",
+  "Submit message-New Question": "سؤال جديد",
+  "Submit message-Good Job": "أحسنت",
+  "Submit message-continue": "المتابعة",
+  "Submit message-Wrong Answer": "إجابة خاطئة",
+  "Submit message-Try Again": "حاول مجدداً",
+  "Submit message-Missing values": "من فضلك أدخل جميع القيم المفقودة",
+  "Submit message-Missing values title": "قيم مفقودة",
+  "Submit message-Missing values text": "من فضلك أدخل جميع القيم",
+  "Submit message-Correct answer": "إجابة صحيحة",
+  "Submit message-OK": "حسناً"
 }
