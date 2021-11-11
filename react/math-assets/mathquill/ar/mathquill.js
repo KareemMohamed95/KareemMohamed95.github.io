@@ -228,6 +228,11 @@ function addPhiSymbol(){
   MQ.MathField(document.getElementById(lastFocusedMQ)).write("هـ");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
+ function addOmegaSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("\\omega");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
  function handlePowers(latex) {
    let newLatex = ""
    for(let i = 0; i < latex.length; i++) {

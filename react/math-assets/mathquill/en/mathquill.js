@@ -266,6 +266,11 @@ function addPhiSymbol(){
   MQ.MathField(document.getElementById(lastFocusedMQ)).write("e");
   MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
  }
+ function addOmegaSymbol(){
+  if(lastFocusedMQ == null)return;
+  MQ.MathField(document.getElementById(lastFocusedMQ)).write("\\omega");
+  MQ.MathField(document.getElementById(lastFocusedMQ)).focus();
+ }
 /* MathInput functions */
 
 

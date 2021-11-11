@@ -29,5 +29,6 @@ var mqArabicMapping = {
     "قتا": "\\csc",
     "قا": "\\sec",
     "ظتا": "\\cot",
-    "ط": "\\pi"
+    "ط": "\\pi",
+    "w": "\\omega"
 };
