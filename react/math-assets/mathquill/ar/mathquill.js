@@ -1900,10 +1900,25 @@ var saneKeyboardEvents = (function() {
       var text = textarea.val();
       if (text.length === 1) {
         textarea.val('');
-        handlers.typedText(text);
+        handlers.typedText(mapArabic(text));
       } // in Firefox, keys that don't type text, just clear seln, fire keypress
       // https://github.com/mathquill/mathquill/issues/293#issuecomment-40997668
       else if (text && textarea[0].select) textarea[0].select(); // re-select if that's why we're here
+    }
+
+    function mapArabic (text) {
+      if(text === '0') text = '٠'
+      else if(text === '1') text = '١'
+      else if(text === '2') text = '٢'
+      else if(text === '3') text = '٣'
+      else if(text === '4') text = '٤'
+      else if(text === '5') text = '٥'
+      else if(text === '6') text = '٦'
+      else if(text === '7') text = '٧'
+      else if(text === '8') text = '٨'
+      else if(text === '9') text = '٩'
+      else if(text === '.') text = ','
+      return text;
     }
 
     function onBlur() { keydown = keypress = null; }
