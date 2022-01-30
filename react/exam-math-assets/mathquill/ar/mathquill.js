@@ -1,7 +1,7 @@
 /* MathInput functions */
 var lastFocusedMQ = null;
 function MIValue(id) {
-  return ArabicToEnglishLatex(handlePowers(MQ.MathField(document.getElementById(id)).latex()));
+  return MQ.MathField(document.getElementById(id)).latex();
 }
 function addSqrtSymbol(){
   if(lastFocusedMQ == null)return;

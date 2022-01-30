@@ -1,45 +1,7 @@
 /* MathInput functions */
 var lastFocusedMQ = null;
 function MIValue(id) {
-  let latex = MQ.MathField(document.getElementById(id)).latex();
-  let newLatex = '';
-  for(let i = 0;i < latex.length; i++) {
-    /* special symbols mapping */
-    if(latex.substr(i,2) === 'ln' || latex.substr(i,3) === 'log') {
-      newLatex += latex.substr(i,2) === "ln" ? 'loge' : 'log'
-      let j = latex.substr(i,2) === "ln" ? i+2 : i+3;
-      let neglect = -1;
-      while(j <= latex.length-1 && latex[j] === '_') j++;
-      while(j <= latex.length-1) {
-        if(latex[j] === '{') {
-          if(neglect > -1) newLatex += '{'
-          neglect++; 
-          j++;
-          continue;
-        }
-        if(latex[j] === '}') {
-          if(neglect === 0) {
-            j++;
-            break;
-          }
-          else {
-            neglect--;
-            newLatex += '}';
-            j++;
-            continue;
-          }
-        }
-        if(latex[j] === '(' && neglect === -1)  break;
-        newLatex += latex[j];
-        j++;
-      }
-      i = j-1;
-      continue;
-    }
-    /* special symbols mapping */
-    newLatex += latex[i]
-  }
-  return newLatex;
+  return MQ.MathField(document.getElementById(id)).latex();
 }
 function addSqrtSymbol(){
  if(lastFocusedMQ == null)return;
